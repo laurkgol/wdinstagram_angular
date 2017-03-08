@@ -84,8 +84,11 @@
   }
 
   function instaEditControllerFunction(instaFactory, $stateParams){
-    this.insta = instaFactory.get({id: $stateParams.id})
+    this.insta = instaFactory.get({id: $stateParams.id});
     this.update = function(){
-      this.insta.$update({id: $stateParams})
+      this.insta.$update({id: $stateParams.id})
+    }
+    this.destroy = function(){
+      this.insta.$delete({id: $stateParams.id});
     }
 }
