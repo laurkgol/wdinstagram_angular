@@ -1,0 +1,9 @@
+<a data-ui-sref="instaNew">New insta</a>
+
+<h2>These are all the instas</h2>
+
+<div data-ng-repeat="insta in vm.instas">
+  <p><a data-ui-sref="instaShow({id: insta.id})">{{insta.author}}</a>
+    <a data-ui-sref="instaEdit({id: insta.id})">Edit</a>
+  </p>
+</div>
